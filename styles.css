@@ -1,0 +1,528 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Orbitron", sans-serif;
+    background: #000;
+    color: #00baff;
+    /* Tron-style blue */
+    line-height: 1.6;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    padding: 0;
+    /* Remove extra padding for a full-screen effect */
+    height: 100vh;
+    /* Set height to 100% of the viewport height */
+    border-bottom: 3px solid #00baff;
+    display: flex;
+    justify-content: center;
+    /* Center the content horizontally */
+    align-items: center;
+    /* Center the content vertically */
+    flex-direction: column;
+    /* Stack the content vertically */
+}
+
+/* Specific Window Effect for Header */
+.window-container {
+    border: 2px solid #00baff;
+    /* Blue border to make it look like a window */
+    box-shadow: 0 0 15px rgba(0, 186, 255, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    /* Rounded corners */
+    width: 90%;
+    /* Adjust the width of the window */
+    max-width: 800px;
+    /* Max width of the window */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    min-height: 350px;
+    /* Ensure there's enough height for content */
+}
+
+/* Title Bar for Window */
+.title-bar {
+    background: rgba(120, 200, 255, 0.4);
+    /* Semi-transparent bluish title bar */
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    /* Space between title bar and content */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* Ensure it's above other content */
+}
+
+/* Header Text */
+header h1 {
+    font-size: 4rem;
+    color: #00baff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(0, 186, 255, 0.8);
+    animation: glow 1.5s ease-in-out infinite alternate;
+    margin-top: 60px;
+    /* Give space from the title bar */
+}
+
+/* Typewriter Effect on h2 */
+.typewriter {
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    /* Space between h1 and h2 */
+    width: 100%;
+    /* Allow it to take the full width */
+}
+
+.typewriter h2 {
+    font-size: 1.8rem;
+    color: #00baff;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    white-space: pre-wrap;
+    /* Ensure text wraps and preserves whitespace */
+    overflow: hidden;
+    /* Hide content outside the bounds of the container */
+    display: inline-block;
+    /* Important for animating width */
+    position: relative;
+    line-height: 1.5;
+}
+
+/* Blinking Cursor Effect using absolute positioning */
+.cursor {
+    display: inline-block;
+    width: 4px;
+    height: 1em;
+    margin-left: 2px;
+    background-color: #00baff;
+    animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 15px rgba(0, 186, 255, 0.6), 0 0 25px rgba(0, 186, 255, 0.4);
+    }
+
+    100% {
+        text-shadow: 0 0 30px rgba(0, 186, 255, 1), 0 0 40px rgba(0, 186, 255, 0.8);
+    }
+
+}
+
+/* Main Resume Section */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* General Section Style */
+.section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    padding: 30px 20px;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* About Section */
+#about {
+    background: linear-gradient(45deg, rgba(0, 186, 255, 0.1), rgba(0, 186, 255, 0.2));
+    box-shadow: 0 10px 20px rgba(0, 186, 255, 0.1);
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: #00baff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00baff;
+    padding-bottom: 10px;
+}
+
+.section-content {
+    font-size: 1.3rem;
+    color: #aaa;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Skills Section - Fast Slide-In Animation */
+#skills {
+    background: linear-gradient(45deg, rgba(0, 186, 255, 0.1), rgba(0, 186, 255, 0.2));
+    box-shadow: 0 10px 20px rgba(0, 186, 255, 0.1);
+}
+
+#skills ul {
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 0;
+    display: inline-block;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+    /* Ensure words break and wrap */
+    max-width: 100%;
+    /* Ensure it doesn't overflow the container */
+}
+
+#skills li {
+    margin: 10px 0;
+    color: #bbb;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+#skills li.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Experience Section - Slide from Left */
+#experience {
+    background: linear-gradient(45deg, rgba(0, 186, 255, 0.1), rgba(0, 186, 255, 0.2));
+    box-shadow: 0 10px 25px rgba(0, 186, 255, 0.1);
+}
+
+#experience h3 {
+    font-size: 1.8rem;
+    color: #00baff;
+    margin-bottom: 15px;
+}
+
+#experience p {
+    font-size: 1.1rem;
+    color: #bbb;
+}
+
+#experience ul {
+    padding: 0;
+    font-size: 1rem;
+}
+
+#experience li {
+    margin: 10px 0;
+    color: #bbb;
+}
+
+/* Education Section - Slide from Right */
+#education {
+    background: linear-gradient(45deg, rgba(0, 186, 255, 0.1), rgba(0, 186, 255, 0.2));
+}
+
+#education h3 {
+    font-size: 1.5rem;
+    color: #00baff;
+    margin-bottom: 15px;
+}
+
+#education p {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+#education ul {
+    margin: 10px 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+#education li {
+    margin-left: 30px;
+    color: #bbb;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background: #111;
+    color: #aaa;
+    font-size: 1rem;
+    border-top: 2px solid #00baff;
+}
+
+footer a {
+    color: #00baff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Create a semi-transparent overlay */
+.window-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    /* Black overlay with 40% opacity */
+    z-index: 0;
+    /* Place it below the header content */
+}
+
+/* Ensure the header content is above the overlay */
+.window-content {
+    position: relative;
+    z-index: 1;
+    /* Keep the content above the overlay */
+}
+
+/* Education Section */
+.education-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Initial state: Education boxes off-screen (left or right of the viewport) */
+.education-box {
+    background: linear-gradient(45deg, rgba(0, 186, 255, 0.05), rgba(0, 186, 255, 0.2));
+    box-shadow: 0 10px 20px rgba(0, 186, 255, 0.1);
+    padding: 20px;
+    width: 45%;
+    margin-bottom: 20px;
+    transform: translateX(-100%);
+    /* Start off-screen from the left */
+    opacity: 0;
+    /* Invisible initially */
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+    /* Smooth slide-in transition */
+}
+
+/* Final state: When the education box becomes visible */
+.education-box.visible {
+    transform: translateX(0);
+    /* Slide to original position */
+    opacity: 1;
+    /* Make visible */
+}
+
+/* Reset the transform and opacity when not visible */
+.education-box:not(.visible) {
+    transform: translateX(-100%);
+    /* Move back off-screen (left) */
+    opacity: 0;
+    /* Reset opacity */
+}
+
+.arrow-container {
+    position: relative;
+    width: 10%;
+    margin-left: 3%;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 20px 20px;
+    border-color: transparent #00baff transparent #00baff;
+}
+
+.arrow:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -50px;
+    height: 2px;
+    width: 40px;
+    background-color: #00baff;
+}
+
+/* Experience Section */
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Initial state: Experience boxes off-screen (above the viewport) */
+.experience-box {
+    background: linear-gradient(45deg, rgba(0, 186, 255, 0.05), rgba(0, 186, 255, 0.2));
+    box-shadow: 0 10px 20px rgba(0, 186, 255, 0.1);
+    padding: 20px;
+    width: 80%;
+    margin-bottom: 20px;
+    transform: translateY(-30px);
+    /* Start above the viewport */
+    opacity: 0;
+    /* Invisible initially */
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+    /* Smooth slide-down transition */
+}
+
+/* Final state: When the experience box becomes visible */
+.experience-box.visible {
+    transform: translateY(0);
+    /* Slide to original position */
+    opacity: 1;
+    /* Make visible */
+}
+
+/* Reset the transform and opacity when not visible */
+.experience-box:not(.visible) {
+    transform: translateY(-30px);
+    /* Move back off-screen */
+    opacity: 0;
+    /* Reset opacity */
+}
+
+.arrow-container.vertical {
+    transform: rotate(90deg);
+    margin-left: 0%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+/* Projects Section */
+#projects {
+    background: linear-gradient(45deg, rgba(0, 186, 255, 0.1), rgba(0, 186, 255, 0.2));
+    box-shadow: 0 10px 20px rgba(0, 186, 255, 0.1);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#projects .section-title {
+    font-size: 2.2rem;
+    color: #00baff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00baff;
+    padding-bottom: 10px;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.project-card {
+    background: rgba(0, 186, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0 15px;
+    width: 500px;
+    /* Set to a larger width for bigger images */
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 186, 255, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: white;
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    color: #00baff;
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    color: greenyellow;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* Carousel Arrows (New class names) */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #00baff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.carousel-arrow:hover {
+    background: #008c99;
+}
+
+.carousel-arrow-left {
+    left: 10px;
+}
+
+.carousel-arrow-right {
+    right: 10px;
+}

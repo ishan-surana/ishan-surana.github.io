@@ -1,163 +1,207 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ishan Surana - Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="https://i.pinimg.com/originals/18/e9/84/18e98488f4463e3114d7059324ec382c.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+        <link href="styles.css" rel="stylesheet" />
+    </head>
 
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <body>
+        <header>
+            <div style="position: absolute; top: 0; width: 100%; height: 100%; z-index: -1;">
+                <video src="https://cdn.pixabay.com/video/2020/09/12/49798-459795242_large.mp4" style="width: 100%; height: 100%; object-fit: cover;" autoplay muted loop>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <img src="https://i.pinimg.com/originals/18/e9/84/18e98488f4463e3114d7059324ec382c.png" width="250px" style="position: absolute; z-index: -1; object-position: 0% 1rem;" />
+            <div class="window-container">
+                <div class="title-bar">WELCOME TO THE GRID, USER</div>
+                <div class="window-content">
+                    <h1>ISHAN SURANA</h1>
+                    <div class="typewriter">
+                        <h2 id="typedText"></h2>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-  <style>
-    .container {
-      display: flex;
-      padding: 50px 50px 0px 50px;
-    }
+        <div class="content">
+            <!-- About Section with Regular Paragraph -->
+            <section class="section" id="about">
+                <div class="section-title">About Me</div>
+                <div class="section-content">
+                    <p>
+                        I am currently a 3rd Year student at MIT Manipal, deeply passionate about cybersecurity and coding. As a quick learner, I engage actively in local tech communities and often participate in AI/ML competitions,
+                        hackathons and Capture The Flag challenges. My technical interests span quantum computing and AI/ML, alongside a keen enthusiasm for anime and movies.
+                    </p>
+                </div>
+            </section>
 
-    .column {
-      flex: 1;
-      padding: 50px;
-    }
+            <!-- Projects Section -->
+            <section class="section" id="projects">
+                <div class="section-title">My Projects</div>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="project-card">
+                            <img src="images/federanet.png" alt="FederaNet" />
+                            <h3>FederaNet</h3>
+                            <p>A Multimodal Cyberattack classification model trained on social media messages, using deep learning for NLP tasks.</p>
+                            <p>It is built as component of a federated framework utilizing a custom blockchain system complete with consensus & smart contracts, public key cryptography, zero-knowledge proofs and post-quantum key distribution.</p>
+                            <br/>
+                            <a href="https://github.com/ishan-surana/FederaNet" target="_blank">View Project</a>
+                        </div>
+                        <div class="project-card">
+                            <img src="images/cryptosystems.png" alt="cryptosystems" />
+                            <h3>cryptosystems</h3>
+                            <p>The cryptosystems package offers a robust suite of classes and functions for both symmetric and asymmetric encryption, as well as hashing functionalities.</p>
+                            <p>All modules are implemented from scratch in Python and C (for speed in mathematical functions), utilising only the built-in libraries like <code style="font-size: 1.2rem;">ctypes</code> and <code style="font-size: 1.2rem;">hashlib</code>, resulting in a dependency-free package.</code></p>
+                            <br/>
+                            <a href="https://github.com/ishan-surana/cryptosystems" target="_blank">View Project</a>
+                        </div>
+                        <div class="project-card">
+                            <img src="images/cras.png" alt="ClassRoom Allotment System" />
+                            <h3>ClassRoom Allotment System</h3>
+                            <p>Project developed with the purpose of automation and streamlining the process of room reservation and allocation within academic institutions, made as part of project for the course Database Systems.</p>
+                            <p>The backend is a Flask app, and utilises HTML, CSS and JS for frontend. SQLITE3 is used for database.</p>
+                            <br />
+                            <a href="https://github.com/ishan-surana/ClassRoom-Allotment-System" target="_blank">View Project</a>
+                        </div>
+                        <div class="project-card">
+                            <img src="images/dashboard.png" alt="Cyber Incidents Dashboard" />
+                            <h3>Cyber Incidents Dashboard</h3>
+                            <p>Cyber Incident Dashboard made for SIH 2024, as part of team Cryptonite.</p>
+                            <ul style="text-align: left; color: rgb(180, 180, 180); margin-left: 10%;">
+                                <li><b>Problem Statement ID:</b> 1667</li>
+                                <li><b>Problem Statement Title:</b> Developing a tool to provide for real time feeds of cyber incident pertaining to Indian Cyber Space.</li>
+                            </ul>
+                            <br/><br/><br/>
+                            <a href="https://github.com/ishan-surana/cyber-dashboard" target="_blank">View Project</a>
+                        </div>
+                        <div class="project-card">
+                            <img src="https://repository-images.githubusercontent.com/821099642/6e33931a-7284-4d3a-af54-b05eee1ba2e1" alt="MetaDataScraper" />
+                            <h3>MetaDataScraper</h3>
+                            <p>MetaDataScraper is a Python package designed to automate the extraction of follower counts and post details from a public Facebook page. It uses Selenium WebDriver for web automation and scraping, without the requirement of an API key.</p>
+                            <p>Two modes of operation: <code style="font-size: 1.2rem;">LoginLess</code> for general purpose, and <code style="font-size: 1.2rem;">LoggedIn</code> to access private pages.</p>
+                            <br/>
+                            <a href="https://github.com/ishan-surana/MetaDataScraper" target="_blank">View Project</a>
+                        </div>                        
+                    </div>
+                    <!-- Left Arrow -->
+                    <div class="carousel-arrow carousel-arrow-left" id="prev">
+                        &#8249;
+                    </div>
+                    <!-- Right Arrow -->
+                    <div class="carousel-arrow carousel-arrow-right" id="next">
+                        &#8250;
+                    </div>
+                </div>
+            </section>
 
-    #column1 {
-      padding-right: 50px;
-      width: calc(50% - 25px);
-    }
+            <!-- Skills Section -->
+            <section class="section" id="skills">
+                <div class="section-title">Skills</div>
+                <div class="section-content">
+                    <ul>
+                        <li><b>Programming Languages:</b> (C, Java, Python, Bash, JavaScript)</li>
+                        <li><b>Web Development:</b> (HTML, CSS, React, NodeJS, Flask, Django)</li>
+                        <li><b>Databases:</b> (SQLite3, Database Management)</li>
+                        <li><b> Security & Hacking:</b> (Ethical Hacking, CTFs, Web Exploitation, Cryptography, PyCryptodome)</li>
+                        <li><b> Software Development:</b> (Object-Oriented Programming, Data Structures and Algorithms, Berkeley Sockets API)</li>
+                        <li>
+                            <b> AI/ML:</b> (Artificial Intelligence, Machine Learning, Neural Networks, Natural Language Processing (NLP), Time Series Analysis, Demand Forecasting and Sales Prediction, scikit-learn, Keras, TensorFlow, NLTK)
+                        </li>
+                        <li><b>Computer Vision:</b> (OpenCV, Pillow, scikit-image)</li>
+                        <li><b> Data Analysis & Visualization:</b> (Numpy, Pandas, Matplotlib, Seaborn, Altair, NetworkX, Graphviz, Statsmodels, Power BI, Streamlit)</li>
+                        <li><b>Quantum Computing:</b> (Quantum cryptography, Qiskit)</li>
+                        <li><b>Cloud & DevOps:</b> (Azure DevOps, Docker, Git, GitHub)</li>
+                        <li><b> Testing & Automation:</b> (requests, Selenium, BeautifulSoup, PyTest)</li>
+                        <li><b>Other Tools & Libraries:</b> (Sphinx, Owlready2)</li>
+                    </ul>
+                </div>
+            </section>
 
-    #image {
-      /* padding-left: 100px; */
-      border-radius: 50%;
-    }
+            <!-- Education Section -->
+            <section class="section" id="education">
+                <div class="section-title">Education</div>
+                <div class="section-content education-content">
+                    <div class="education-box">
+                        <h3>Schooling</h3>
+                        <p><b>AISSE</b> (Class 10) - CBSE: <b>96.8%</b></p>
+                        <p><b>AISSCE</b> (Class 12) - CBSE: <b>94%</b></p>
+                    </div>
+                    <div class="arrow-container">
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="education-box">
+                        <h3>B.Tech in Information Technology</h3>
+                        <ul>
+                            <p><b>Manipal Institute of Technology</b> - CGPA: <b>8.54</b></p>
+                            <li>Pursuing Minor B.Tech in Computational Intelligence</li>
+                            <li>Pursuing Honours in AI/ML</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-    #column2 {
-      padding-left: 50px;
-      width: calc(50% - 25px);
-    }
+            <!-- Experience Section -->
+            <section class="section" id="experience">
+                <div class="section-title">Experience</div>
+                <div class="section-content experience-content">
+                    <div class="experience-box">
+                        <h3>Core Team Member at Cryptonite</h3>
+                        <p><b>Duration: December 2022 - Present</b></p>
+                        <li>
+                            Participated in CTFs as part of the official cybersecurity team of MIT Manipal, mostly delving in web exploitation domain.
+                        </li>
+                        <li>
+                            Organized and helped host niteCTF 2023 and prepared 2 challenges (regarding SQLi and steganography)
+                        </li>
+                        <li>
+                            Active involvement in the AI/ML and research domains, with work on federated cyberattack analysis and ontology representation and reasoning incorporating knowledge graphs.
+                        </li>
+                    </div>
+                    <div class="arrow-container vertical">
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="experience-box">
+                        <h3>Core Team Member at ACM Manipal Chapter</h3>
+                        <p><b>Duration: June 2023 - Present</b></p>
+                        <li>Attend various talks by ACM alumni.</li>
+                        <li>
+                            Participated as well as helped organize various coding competitions and workshops.
+                        </li>
+                    </div>
+                    <div class="arrow-container vertical">
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="experience-box">
+                        <h3>ML Intern at Brainvire Infotech</h3>
+                        <p><b>Duration: May 2024 - July 2024</b></p>
+                        <li>
+                            Developed scripts and applications to meet various needs of our clients, primarily focusing on sales prediction and forecasting (utilizing statistical and regressive ML models).
+                        </li>
+                        <li>
+                            I was responsible for data analysis and cleaning, model experimentation, hyperparameter tuning, model deployment and ensuring reproducibility with low latency.
+                        </li>
+                        <li>
+                            Improved efficiency in projects involving social media data scraping, ID validation, chatbot testing and more.
+                        </li>
+                    </div>
+                </div>
+            </section>
+        </div>
 
-    #edu {
-      margin-bottom: -15px;
-    }
-
-    .wrap-text {
-      overflow-wrap: break-word;
-    }
-
-    /* Add space between columns */
-    .column+.column {
-      margin-left: 20px;
-      /* Adjust the margin value to increase or decrease the space */
-    }
-
-    .pfp {
-      border-radius: 50%;
-    }
-
-     p, li {
-      font-family: Lato, sans-serif;
-    }
-
-    h4, i{
-      font-family: "Lato-Bold", Lato, san-serif;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-    <div class="column" style="text-align: center;">
-      <img src="images/me.jpg" width="300px" height="auto" class="pfp" id="image">
-    </div>
-    <div class="column">
-      <p style="font-family: 'Poppins', sans-serif; font-size: 60px; line-height: 1;"><b>Ishan<br>Surana<b></p>
-      <p style="font-size:20px"><b><i>STUDENT</b></i></p>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="column" id="column1">
-
-      <h2 style="font-family: 'Poppins', sans-serif; color:gray;"><img src="images/aboutme.png" width="25px"
-          height="auto"> About me</h2>
-      <p class="wrap-text"><i>1st Year student at MIT Manipal, Member at Cryptonite MIT. Cybersecurity and coding
-          enthusiast. Quick learner and eager to try new things. Love to watch movies and listen to music.</i></p>
-      <br>
-      <h2 style="font-family: 'Poppins', sans-serif; color:gray;"><img src="images/contact.png" width="25px"
-          height="auto"> Contact</h2>
-      <p><i>
-          <ul style="list-style-type:none;padding-left:25px;">
-            <li><img src="images/call.png" width="20px" height="auto"> 7977990529</li>
-            <li><img src="images/mail.png" width="20px" height="auto"> ishansurana1234@gmail.com</li>
-            <li><img src="images/website.png" width="20px" height="auto"> https://www.linkedin.com/in/ishansurana</li>
-            <li><img src="images/location.png" width="20px" height="auto"> Mumbai</li>
-          </ul>
-        </i></p>
-      <br>
-      <h2 style="font-family: 'Poppins', sans-serif; color:gray;"><img src="images/skills.png" width="25px"
-          height="auto"> Skills</h2>
-      <p><i>
-          <ul>
-            <li> HTML</li>
-            <li> C Programming</li>
-            <li> Linux (Basic)</li>
-            <li> Cybersecurity & Ethical Hacking</li>
-            <li> SQL (Basic)</li>
-          </ul>
-        </i></p>
-      <br>
-      <h2 style="font-family: 'Poppins', sans-serif; color:gray;"><img src="images/language.png" width="25px"
-          height="auto"> Languages</h2>
-      <p><i>
-          <ul>
-            <li> English</li>
-            <li> Hindi</li>
-            <li> French</li>
-          </ul>
-        </i></p>
-
-    </div>
-
-
-
-    <div class="column" id="column2">
-      <h2 style="font-family: 'Poppins', sans-serif; color:gray;"><img src="images/education.png" width="25px"
-          height="auto"> Education</h2>
-      <h4 id="edu">(2022 - Present)<br><i>MANIPAL INSTITUTE OF TECHNOLOGY</i></h4>
-      <p style="font-family: 'Poppins', sans-serif;">Pursuing B.Tech in CS-IT</p>
-      <h4 id="edu">(2006 - 2022)<br><i>RYAN INTERNATIONAL SCHOOL</i></h4>
-      <p style="font-family: 'Poppins', sans-serif;">
-      <ul>
-        <li>Class 12 (CBSE):- 94%</li>
-        <li>Class 10 (CBSE):- 96.8%</li>
-      </ul>
-      </p>
-      <br><br>
-      <h2 style="font-family: 'Poppins', sans-serif; color:gray; margin:0px;"><img src="images/experience.png"
-          width="25px" height="auto"> Experience</h2>
-      <h4 id="edu">(2022 - Present)<br><i>STUDENT</i></h4>
-      <p id="edu">MIT Manipal</p>
-      <p style="font-family: 'Poppins', sans-serif;">
-      <ul>
-        <li>Pursuing B.Tech in CS-IT.</li>
-        <li>Developing skills and forming connections to futher my growth.</li>
-      </ul>
-      </p>
-      <h4 id="edu">(Apr 2023 - Present)<br><i>TEAM MEMBER</i></h4>
-      <p id="edu">Cryptonite (Ethical Hacking Student Project)</p>
-      <p style="font-family: 'Poppins', sans-serif;">
-      <ul>
-        <li>Part of recruitment Task Phase from Dec 2022 to Apr 2023.</li>
-        <li>Team Member from Apr 2023.</li>
-      </ul>
-      </p>
-      <h4 id="edu">(Mar 2023 - May 2023)<br><i>MATHS TUTOR (DOUBT SOLVING)</i></h4>
-      <p id="edu">Contexto [Gauth Expert]</p>
-      <p style="font-family: 'Poppins', sans-serif;">
-      <ul>
-        <li>Freelanced as a mathematics subject matter expert and solved doubts on Gauth Expert app in my free time.
-        </li>
-      </ul>
-      </p>
-    </div>
-  </div>
-</body>
-
+        <footer>
+            <p>
+                &copy; 2024 Ishan Surana |
+                <a href="https://github.com/ishan-surana">GitHub</a> |
+                <a href="https://linkedin.com/in/ishansurana">LinkedIn</a>
+            </p>
+        </footer>
+        
+        <script src="script.js"></script>
+    </body>
 </html>

@@ -207,4 +207,3 @@ def chat():
     return jsonify({
         "response": response.text
     })
-app.run()
